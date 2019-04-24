@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+<input id="date"></input> <br />
+<button onClick="copyText()">Copy Date</button>
+
+<script>
+document.getElementById("date").value = new Date().toISOString().slice(2, 10).replace(/-/g, '.') + '.txt'
+
+function copyText() {
+	let copyText = document.getElementById("date");
+	copyText.select();
+	document.execCommand("copy")
+	
+}
+</script>
+
+</body>
+
+</html>
